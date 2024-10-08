@@ -1,0 +1,120 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Danilov V.
+      changes:
+        - createTable:
+            tableName: Person
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: Danilov V.
+      changes:
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Сантименто Публицио Франциск Третий
+              - column:
+                  name: code
+                  value: Code1
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Ульяно-Премудров Павлушевий
+              - column:
+                  name: code
+                  value: Code2
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Вильермо Гватемало МО
+              - column:
+                  name: code
+                  value: Code3
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Секретный Прынц Искандеровский
+              - column:
+                  name: code
+                  value: Code4
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Обоев Рулон Обмазанный
+              - column:
+                  name: code
+                  value: Code5
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Секстинский Капелло Донателлович
+              - column:
+                  name: code
+                  value: Code6
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Василий Нерамсинский
+              - column:
+                  name: code
+                  value: Code7
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Однако Эдуардвич Стопудововский
+              - column:
+                  name: code
+                  value: Code8
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Геннадий Охламонович Коньюктевитов
+              - column:
+                  name: code
+                  value: Code9
+        - insert:
+            tableName: Person
+            columns:
+              - column:
+                  name: name
+                  value: Дружбан Ухогрызов Великолукский
+              - column:
+                  name: code
+                  value: Code10

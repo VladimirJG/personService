@@ -25,7 +25,7 @@ public class PersonService {
     }
 
     @Transactional(readOnly = true)
-    public Person findById(Integer id) {
+    public Person findByPersonId(Integer id) {
         Optional<Person> byId = personRepository.findById(id);
         return byId.orElse(null);
     }
@@ -35,12 +35,12 @@ public class PersonService {
         personRepository.save(person);
     }
 
-    public void update(int id, Person updatedPerson) {
+    public void updatePerson(int id, Person updatedPerson) {
         updatedPerson.setId(id);
         personRepository.save(updatedPerson);
     }
 
-    public void delete(int id) {
+    public void deletePerson(int id) {
         personRepository.deleteById(id);
     }
 }

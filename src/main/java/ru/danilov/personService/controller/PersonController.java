@@ -23,9 +23,10 @@ public class PersonController {
         List<Person> persons = personService.findPersonList();
         return new ResponseEntity<>(persons, HttpStatus.OK);
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Person> getPersonById(@PathVariable Integer id) {
-        Person person = personService.findById(id);
+        Person person = personService.findByPersonId(id);
         if (person != null) {
             return new ResponseEntity<>(person, HttpStatus.OK);
         } else {
@@ -41,13 +42,13 @@ public class PersonController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> updatePerson(@PathVariable int id, @RequestBody Person updatedPerson) {
-        personService.update(id, updatedPerson);
+        personService.updatePerson(id, updatedPerson);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePerson(@PathVariable int id) {
-        personService.delete(id);
+        personService.deletePerson(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
